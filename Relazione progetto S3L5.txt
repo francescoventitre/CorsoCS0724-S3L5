@@ -1,0 +1,42 @@
+COMPONENTI DELLA RETE
+
+Zona di Internet:
+Rappresentata dalla nuvola in alto, il router invece simula l'ISP.
+
+Firewall Perimetrale:
+Posizionato tra la zona di Internet, la DMZ e la rete interna per filtrare e controllare il traffico.
+
+Zona DMZ:
+Server Web HTTP: Utilizzato per rilasciare il servizio WEB per gli utenti esterni (sito web dell'azienda o eCommerce o altro).
+Server di Posta Elettronica SMTP: Utilizzato per gestire la ricezione e l'invio di eMail.
+
+Rete Interna:
+Server NAS: Utilizzato per l'archiviazione e la gestione dei dati interni.
+PC: Utilizzato per rappresentare i PC dei dipendenti.
+
+
+CONFIGURAZIONE DELLA RETE
+
+Zona di Internet
+Il cloud rappresenta l'accesso esterno a Internet, da cui proviene tutto il traffico entrante e uscente.
+
+Zona DMZ
+La DMZ è una zona intermedia tra Internet e la rete interna. È configurata per ospitare i server che devono essere accessibili dall'esterno ma non direttamente collegati alla rete interna, riducendo così il rischio di attacchi.
+Server Web HTTP: Configurato per rispondere alle richieste HTTP provenienti dall'esterno, permettendo l'accesso ai contenuti web pubblici.
+Server di Posta Elettronica SMTP: Configurato per gestire le email, accettando messaggi dall'esterno e inviandoli verso altri server di posta.
+
+Rete Interna
+La rete interna è riservata ai dispositivi dei dipendenti e ai servizi che devono rimanere protetti dagli accessi non autorizzati.
+Server NAS: Configurato per fornire spazio di archiviazione e accesso ai dati per gli utenti interni, mantenendo sicuri i file e le informazioni sensibili e importanti.
+
+Firewall Perimetrale
+Il firewall perimetrale è una componente cruciale per la sicurezza della rete. Esso controlla il traffico tra le tre zone, applicando regole di filtraggio per prevenire accessi non autorizzati e proteggere i dati interni.
+Regole del Firewall: Configurato per filtrare le connessioni in ingresso e uscita, bloccando il traffico non autorizzato e permettendo solo le comunicazioni necessarie tra Internet, la DMZ e la rete interna.
+
+ACL (Access Control Lists): Configurate sugli switches per controllare ulteriormente il traffico tra rete interna ed esterna e gli accessi al NAS.
+VLAN (Virtual Local Area Network): Configurate per segmentare e controllare il traffico tra DMZ, server interni e utenti interni.
+NAT (Network Address Translation): Utilizzato per nascondere gli indirizzi IP interni dalla rete esterna, migliorando ulteriormente la sicurezza.
+
+Si potrebbero implementare anche altri servizi quali:
+IDS/IPS (Intrusion Detection/Prevention System, per rilevare ulteriori attività sospette)  
+VPN (Virtual Private Network, per permettere ad eventuali utenti remoti di accedere in maniera sicura alla rete interna)
